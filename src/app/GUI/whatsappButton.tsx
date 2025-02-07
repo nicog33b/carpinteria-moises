@@ -8,10 +8,11 @@ interface WhatsAppButtonProps {
   message?: string
 }
 
-const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ phoneNumber, message = "Hello! I have a question." }) => {
+const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ phoneNumber, message = "Hola! Tengo una consulta." }) => {
   const handleClick = () => {
     const encodedMessage = encodeURIComponent(message)
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank")
+
   }
 
   const MotionIcon = motion(FaWhatsapp)
