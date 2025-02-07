@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-gradient-to-b border-t border-white from-[#1e1e1e] to-[#392F19] text-slate-300 py-12 z-50 relative">
       <div className="container mx-auto px-4">
         {/* Logo Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center pb-8 mb-8 border-b border-slate-700">
+        <div className="flex flex-col md:flex-row justify-between items-center pb-8 mb-8 border-b border-slate-700 mt-6 mt-3">
           <Link href="/" className="group">
             <Image
               className="w-20 h-20 cursor-pointer rounded-full transition-transform duration-300 group-hover:scale-105"
@@ -24,7 +24,7 @@ export default function Footer() {
             <ul className="flex flex-col md:flex-row gap-8 text-center font-playfair">
               <li>
                 <Link 
-                  href="#about" 
+                  href="/" 
                   className="hover:scale-105 text-lg hover:text-slate-100 transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-slate-100 hover:after:w-full after:transition-all after:duration-300"
                 >
                   Inicio
@@ -32,23 +32,23 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="#services" 
+                  href="/trabajos" 
                   className="hover:scale-105 text-lg hover:text-slate-100 transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-slate-100 hover:after:w-full after:transition-all after:duration-300"
                 >
                   Trabajos
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link 
-                  href="#contact" 
+                  href="/nosotros" 
                   className="hover:scale-105 text-lg hover:text-slate-100 transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-slate-100 hover:after:w-full after:transition-all after:duration-300"
                 >
                   Sobre nosotros
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link 
-                  href="#contact" 
+                  href="/contacto" 
                   className="text-lg  hover:text-slate-100 transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-slate-100 hover:after:w-full after:transition-all after:duration-300"
                 >
                   Contacto
@@ -75,6 +75,13 @@ export default function Footer() {
               className="hover:text-slate-100 transition-colors duration-300 hover:scale-105"
             >
               <FaFacebook className="w-7 h-7" />
+            </Link>
+            <Link 
+              href="https://wa.me/094244685" 
+              target="_blank" 
+              className="hover:text-slate-100 transition-colors duration-300 hover:scale-105"
+            >
+              <FaWhatsapp className="w-7 h-7" />
             </Link>
           </div>
 

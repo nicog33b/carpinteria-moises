@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { FaArrowRight } from 'react-icons/fa';
+import Link from "next/link"
 
 const images = ["/muebles/6.jpeg", "/muebles/7.jpeg", "/muebles/8.jpeg", "/muebles/9.jpeg", "/muebles/10.jpeg"]
 
@@ -26,20 +28,20 @@ export default function TailoredSection() {
   }
 
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className="py-20 bg-[#1e1e1e] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center w-full mx-auto mb-16"
         >
-          <h2 className="text-4xl ff-1 md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-6">
+          <h2 className="text-4xl text-[#8B5A2B]/90 ff-1 md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-6">
             CREADO A LA MEDIDA
-            <br />
-            DE TU ESTILO DE VIDA
+            DE TU 
+            <br/>ESTILO DE VIDA
           </h2>
-          <p className="ff-2 text-xl text-[#1e1e1e] max-w-3xl mx-auto mb-12">
+          <p className="ff-2 text-xl text-gray-300 max-w-3xl mx-auto mb-12">
             Transforma tus espacios con muebles únicos, diseñados para reflejar tu estilo, necesidades y sueños. Nuestro compromiso con la artesanía de calidad convierte tus ideas en piezas atemporales que hacen de tu hogar un lugar especial.
           </p>
         </motion.div>
@@ -87,7 +89,21 @@ export default function TailoredSection() {
               />
             ))}
           </div>
+          
         </div>
+        <div className="place-self-center mt-12"> 
+          <Link href='/trabajos'>
+          <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-white text-lg px-8 py-4 rounded-full text-[#1e1e1e] font-display shadow-lg hover:shadow-wood-800 transition-all duration-300 flex items-center"
+        >
+          Ver más trabajos <FaArrowRight className="ml-3"/>
+        </motion.button>
+        </Link>
+        
+        </div>
+       
       </div>
     </section>
   )

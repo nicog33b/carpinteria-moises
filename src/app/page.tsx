@@ -5,6 +5,7 @@ import TailoredSection from "./components/tailored"
 import BottomHero from "./components/bottomHero"
 import Diseno3D from './components/disenio3d';
 import WhatsAppButton from "./GUI/whatsappButton"
+import ProcessTimeline from "./components/process"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <BottomHero />
       <Diseno3D/>
       <TailoredSection />
+      <ProcessTimeline/>
       <ContactSection />
     </main>
   )

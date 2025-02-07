@@ -39,6 +39,11 @@ z-index: 70;
   --background-rgb: 250, 247, 242;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   color: rgb(var(--foreground-rgb));
   background-color:  #F5F5DC;

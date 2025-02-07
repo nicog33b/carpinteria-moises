@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function Diseno3D() {
   useEffect(() => {
@@ -65,14 +66,15 @@ export default function Diseno3D() {
             </p>
           </motion.div>
         </div>
-
+        <div className="place-self-center">
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-[#1e1e1e] text-lg px-8 py-4 rounded-full text-white font-display shadow-lg hover:shadow-wood-800 transition-all duration-300"
+          className="bg-[#1e1e1e] text-lg px-8 py-4 rounded-full text-white font-display shadow-lg hover:shadow-wood-800 transition-all duration-300 flex items-center"
         >
-          Pedi tu diseño
+          Pedi tu diseño <FaArrowRight className="ml-3"/>
         </motion.button>
+        </div>
       </div>
     </section>
   );

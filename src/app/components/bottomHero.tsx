@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { Send } from "lucide-react";
+import Link from "next/link";
 
 const images = [
   "/muebles/1.jpeg",
@@ -9,6 +11,7 @@ const images = [
   "/muebles/3.jpeg",
   "/muebles/4.jpeg",
   "/muebles/5.jpeg",
+  "/muebles/6.jpeg",
 ];
 
 export default function BottomHero() {
@@ -48,25 +51,14 @@ export default function BottomHero() {
               </p>
             </header>
 
-            <a
-              href="/contacto"
+            <Link 
+              href="https://wa.me/094244685" 
+              target="_blank" 
               className="inline-flex items-center justify-center px-8 py-3.5 md:px-10 md:py-4 border-2 border-gray-900 text-gray-900 font-semibold uppercase tracking-wide transition-all duration-300 hover:bg-gray-900 hover:text-white hover:shadow-xl mt-9"
             >
               Solicitar Cotización
-              <svg
-                className="ml-3 w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </a>
+              <Send className="ml-3"/>
+            </Link>
           </article>
 
           {/* Imagen destacada con animación */}

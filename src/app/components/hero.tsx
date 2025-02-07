@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function Hero() {
@@ -36,8 +37,9 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
             className="mt-10"
           >
+            <Link href='/contacto'>
             <button
-              className="inline-flex items-center gap-3 px-12 py-4 bg-[#1e1e1e]/60 hover:bg-[#1e1e1e]/80 backdrop-blur-md text-white text-xl font-semibold rounded-full 
+              className="inline-flex items-center gap-3 px-12 py-4 hover:text-[#1e1e1e] bg-[#1e1e1e]/60 hover:bg-[#1e1e1e]/80 backdrop-blur-md text-white text-xl font-semibold rounded-full 
                          shadow-lg transition-all duration-300 hover:bg-white hover:scale-105 hover:shadow-2xl 
                          focus:outline-none focus:ring-4 focus:ring-white/30"
               aria-label="Explorar diseños personalizados"
@@ -45,6 +47,7 @@ export default function Hero() {
               ✨ Diseña tu hogar
               <FaArrowRight className="ml-2 text-lg" />
             </button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
