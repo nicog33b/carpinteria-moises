@@ -5,6 +5,7 @@ import Image from "next/image";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import Link from "next/link";
 import ContactSection from "../components/contact";
+import { Send } from 'lucide-react';
 
 interface Work {
   id: number;
@@ -57,7 +58,7 @@ const works: Work[] = [
     imageUrl: "/muebles/7.jpeg",
   },
   {
-    id:8,
+    id: 8,
     title: "Estantería Modular Contemporánea",
     description: "Sistema flexible y adaptable para espacios modernos.",
     imageUrl: "/muebles/8.jpeg",
@@ -113,6 +114,12 @@ export default function Trabajos() {
 
   const filteredWorks = works.filter((work) => work.id !== works[currentWork].id);
 
+  // Construir el mensaje y el enlace de WhatsApp
+  const productName = works[currentWork].title;
+  const message = `Quiero un presupuesto para el producto: ${productName}`;
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappLink = `https://wa.me/094244685?text=${encodedMessage}`;
+
   return (
     <div className="min-h-screen bg-white pt-24">
       <motion.div
@@ -146,13 +153,28 @@ export default function Trabajos() {
             <div className="space-y-6">
               <h2 className="ff-1 text-3xl md:text-4xl text-[#8B5A2B]">{works[currentWork].title}</h2>
               <p className="ff-2 text-lg text-[#1E1E1E]">{works[currentWork].description}</p>
+       
+             
+              
+                <Link href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-[#FFC107] text-[#8B5A2B] rounded-full font-medium hover:bg-[#FFD54F] transition-colors"
+                className="px-6 py-3 bg-[#FFC107] text-[#8B5A2B] rounded-full font-medium hover:bg-[#FFD54F] transition-colors mt-9"
               >
+                  <div className="flex items-center font-bold"> 
                 Solicitar Presupuesto
+                <Send className="ml-3"/>
+                </div>
               </motion.button>
+              </Link>
+             
+            
+              
+             
             </div>
           </motion.div>
           <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 flex justify-between">
@@ -201,9 +223,9 @@ export default function Trabajos() {
             ))}
           </div>
         </div>
-      </motion.div>
+      </motion.div >
 
-      <ContactSection/>
-    </div>
+    <ContactSection />
+    </div >
   );
 }

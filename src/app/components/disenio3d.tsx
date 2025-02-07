@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Diseno3D() {
   useEffect(() => {
@@ -67,6 +68,7 @@ export default function Diseno3D() {
           </motion.div>
         </div>
         <div className="place-self-center">
+        <Link href='/contacto'>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -74,6 +76,7 @@ export default function Diseno3D() {
         >
           Pedi tu diseño <FaArrowRight className="ml-3"/>
         </motion.button>
+        </Link>
         </div>
       </div>
     </section>
