@@ -4,13 +4,13 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b border-t border-white from-[#1e1e1e] to-[#392F19] text-slate-300 py-12 z-50 relative">
+    <footer className="bg-gradient-to-b border-t border-white from-[#1e1e1e] to-[#392F19] text-slate-300 py-12 z-50 relative container mx-auto px-4">
       <div className="container mx-auto px-4">
         {/* Logo Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center pb-8 mb-8 border-b border-slate-700 mt-6 mt-3">
+        <div className="flex flex-col md:flex-row justify-between items-center pb-8 mb-8 border-b border-slate-700 mt-3  ">
           <Link href="/" className="group">
             <Image
-              className="w-20 h-20 cursor-pointer rounded-full transition-transform duration-300 group-hover:scale-105"
+              className="w-20 h-20 cursor-pointer rounded-full transition-transform duration-300 group-hover:scale-105  "
               src="/logo.png"
               alt="Logo de la empresa"
               width={256}

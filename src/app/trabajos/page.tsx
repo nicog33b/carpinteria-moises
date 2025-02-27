@@ -11,89 +11,66 @@ interface Work {
   id: number;
   title: string;
   description: string;
+  detalle:string;
   imageUrl: string;    
 }
-
 const works: Work[] = [
   {
     id: 1,
-    title: "Armario de Roble Personalizado",
-    description: "Diseño elegante con detalles intrincados y acabado artesanal.",
+    title: "Placard de Lavadero",
+    description: "Este placard a medida está diseñado para organizar productos de limpieza de manera eficiente. Su estructura resistente y funcional optimiza el espacio en el lavadero.",
+    detalle: "Tiradores de acero inoxidable, negro mate y bisagras autoreten de 35mm con freno.",
     imageUrl: "/muebles/1.jpeg",
   },
   {
     id: 2,
-    title: "Mesa de Centro Modernista",
-    description: "Fusión de madera y metal con líneas limpias y formas geométricas.",
+    title: "Placard de puertas corredizas",
+    description: "Este placard empotrado con puertas corredizas maximiza el almacenamiento con un diseño elegante. Su estructura interna permite una organización óptima del espacio.",
+    detalle: "MDF blanco 18mm y perfilería de aluminio.",
     imageUrl: "/muebles/2.jpeg",
   },
   {
     id: 3,
-    title: "Estantería Modular Contemporánea",
-    description: "Sistema flexible y adaptable para espacios modernos.",
+    title: "Guardarropa de pasillo a medida",
+    description: "Un guardarropa compacto diseñado para aprovechar pasillos o espacios reducidos. Su distribución facilita el acceso y almacenamiento de ropa y accesorios.",
+    detalle: "Tiradores de acero inoxidable color mate, bisagras autoreten de 35mm con freno.",
     imageUrl: "/muebles/3.jpeg",
   },
   {
     id: 4,
-    title: "Estantería Modular Contemporánea",
-    description: "Sistema flexible y adaptable para espacios modernos.",
+    title: "Escalones de finger",
+    description: "Escalones de madera maciza de 35mm con acabado lustrado. Su diseño robusto y elegante brinda una solución estética y funcional para escaleras.",
+    detalle: "",
     imageUrl: "/muebles/4.jpeg",
   },
   {
     id: 5,
-    title: "Estantería Modular Contemporánea",
-    description: "Sistema flexible y adaptable para espacios modernos.",
+    title: "Mueble de baño",
+    description: "Este mueble de baño combina melamina negra ma,te con estantes de madera lustrada. Su diseño ofrece almacenamiento práctico y un estilo moderno.",
+    detalle: "MDF 18mm negro con estantes de finger lustrados, tiradores de acero inoxidable color mate y bisagras de 35mm con freno.",
     imageUrl: "/muebles/5.jpeg",
   },
   {
     id: 6,
-    title: "Estantería Modular Contemporánea",
-    description: "Sistema flexible y adaptable para espacios modernos.",
+    title: "Juego de dormitorio infantil",
+    description: "Con un diseño funcional y decorativo, este juego de dormitorio incluye un ropero amplio y un escritorio flotante. Ideal para habitaciones infantiles.",
+    detalle: "Tiradores decorativos infantiles y bisagras autoreten de 35mm.",
     imageUrl: "/muebles/6.jpeg",
   },
   {
-    id: 7,
-    title: "Estantería Modular Contemporánea",
-    description: "Sistema flexible y adaptable para espacios modernos.",
-    imageUrl: "/muebles/7.jpeg",
-  },
-  {
-    id: 8,
-    title: "Estantería Modular Contemporánea",
-    description: "Sistema flexible y adaptable para espacios modernos.",
-    imageUrl: "/muebles/8.jpeg",
-  },
-  {
-    id: 9,
-    title: "Estantería Modular Contemporánea",
-    description: "Sistema flexible y adaptable para espacios modernos.",
-    imageUrl: "/muebles/9.jpeg",
-  },
-  {
     id: 10,
-    title: "Estantería Modular Contemporánea",
-    description: "Sistema flexible y adaptable para espacios modernos.",
+    title: "Mueble de tv con almacenamiento",
+    description: "Este centro de entretenimiento es un mueble d,iseñado para optimizar el espacio y la organización en una sala de estar. Su estructura combina materiales de madera y melamina en dos tonos",
+    detalle:``,
     imageUrl: "/muebles/10.jpeg",
   },
   {
     id: 11,
-    title: "Estantería Modular Contemporánea",
-    description: "Sistema flexible y adaptable para espacios modernos.",
+    title: "Mueble pileta flotante a medida para baño",
+    description: "Transforma tu baño con un mueble flotant,e diseñado a medida. Su estructura moderna y sin patas optimiza el espacio, aportando elegancia y funcionalidad.",
+    detalle: "Sistema flexible y adaptable para espacios modernos.",
     imageUrl: "/muebles/11.jpeg",
   },
-  {
-    id: 12,
-    title: "Estantería Modular Contemporánea",
-    description: "Sistema flexible y adaptable para espacios modernos.",
-    imageUrl: "/muebles/12.jpeg",
-  },
-  {
-    id: 13,
-    title: "Estantería Modular Contemporánea",
-    description: "Sistema flexible y adaptable para espacios modernos.",
-    imageUrl: "/muebles/1.jpeg",
-  },
-  // Agrega más trabajos según sea necesario
 ];
 
 export default function Trabajos() {
@@ -113,10 +90,8 @@ export default function Trabajos() {
   };
 
   const filteredWorks = works.filter((work) => work.id !== works[currentWork].id);
-
   // Construir el mensaje y el enlace de WhatsApp
-  const productName = works[currentWork].title;
-  const message = `Quiero un presupuesto para el producto: ${productName}`;
+  const message = `Hola, vengo desde tu pagina web, me ha interesado ${works[currentWork].title}`;
   const encodedMessage = encodeURIComponent(message);
   const whatsappLink = `https://wa.me/094244685?text=${encodedMessage}`;
 
@@ -149,13 +124,27 @@ export default function Trabajos() {
                 style={{ objectFit: "cover" }}
                 className="transition-transform duration-300 hover:scale-105"
               />
+              <motion.button
+                onClick={prevWork}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="absolute top-1/2 -translate-y-1/2 left-4 p-2 bg-[#8B5A2B] text-white rounded-full shadow-md z-10"
+              >
+                <LuChevronLeft className="w-6 h-6" />
+              </motion.button>
+              <motion.button
+                onClick={nextWork}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="absolute top-1/2 -translate-y-1/2 right-4 p-2 bg-[#8B5A2B] text-white rounded-full shadow-md z-10"
+              >
+                <LuChevronRight className="w-6 h-6" />
+              </motion.button>
             </div>
             <div className="space-y-6">
               <h2 className="ff-1 text-3xl md:text-4xl text-[#8B5A2B]">{works[currentWork].title}</h2>
               <p className="ff-2 text-lg text-[#1E1E1E]">{works[currentWork].description}</p>
-       
-             
-              
+              <p className="ff-2 text-lg text-[#1E1E1E]">{works[currentWork].detalle}</p>
                 <Link href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -177,24 +166,6 @@ export default function Trabajos() {
              
             </div>
           </motion.div>
-          <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 flex justify-between">
-            <motion.button
-              onClick={prevWork}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="p-2 bg-[#8B5A2B] text-white rounded-full shadow-md"
-            >
-              <LuChevronLeft className="w-6 h-6" />
-            </motion.button>
-            <motion.button
-              onClick={nextWork}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="p-2 bg-[#8B5A2B] text-white rounded-full shadow-md"
-            >
-              <LuChevronRight className="w-6 h-6" />
-            </motion.button>
-          </div>
         </div>
         <div className="mt-16 py-24">
           <h3 className="ff-1 text-2xl md:text-3xl text-[#8B5A2B] mb-6">Más Trabajos</h3>

@@ -33,7 +33,7 @@ export default function Diseno3D() {
           Diseño Exclusivo en Madera
         </motion.h2>
         <p className="ff-2 text-xl text-[#1e1e1e] max-w-3xl mx-auto mb-12">
-          Creamos piezas únicas combinando la precisión del diseño 3D con la maestría artesanal, dando vida a muebles exclusivos y personalizados.
+          Creamos piezas únicas combinando la precisión del diseño 3D, dando vida a muebles exclusivos y personalizados.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto mb-16">

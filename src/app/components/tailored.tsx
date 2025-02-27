@@ -42,7 +42,7 @@ export default function TailoredSection() {
             <br/>ESTILO DE VIDA
           </h2>
           <p className="ff-2 text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-            Transforma tus espacios con muebles únicos, diseñados para reflejar tu estilo, necesidades y sueños. Nuestro compromiso con la artesanía de calidad convierte tus ideas en piezas atemporales que hacen de tu hogar un lugar especial.
+            Transforma tus espacios con muebles únicos, diseñados para reflejar tu estilo, necesidades y sueños. Nuestro compromiso con la calidad convierte tus ideas en piezas atemporales que hacen de tu hogar un lugar especial.
           </p>
         </motion.div>
 

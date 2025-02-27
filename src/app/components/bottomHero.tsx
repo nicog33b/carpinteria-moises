@@ -46,7 +46,7 @@ export default function BottomHero() {
               </h1>
               <p className="ff-2 text-xl text-[#1e1e1e] max-w-3xl mx-auto mb-12">
                 Creamos muebles únicos que combinan diseño, funcionalidad y la
-                más alta calidad artesanal. Haz de tu hogar un espacio especial
+                más alta calidad. Haz de tu hogar un espacio especial
                 con piezas que cuentan tu historia.
               </p>
             </header>
@@ -83,7 +83,7 @@ export default function BottomHero() {
               </motion.div>
             </AnimatePresence>
             <figcaption className="sr-only">
-              Mueble artesanal a medida en un ambiente moderno y cálido.
+              Mueble a medida en un ambiente moderno y cálido.
             </figcaption>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-amber-50/20" />
           </figure>
